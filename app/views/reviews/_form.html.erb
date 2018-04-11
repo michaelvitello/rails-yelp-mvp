@@ -1,0 +1,7 @@
+<%= simple_form_for [restaurant, review] do |f| %>
+  <div class="form-group">
+    <%= f.input :rating, as: :radio_buttons, collection: Review::RATINGS, class: 'form-control' %>
+    <%= f.input :content, as: :text, class: 'form-control' %>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
